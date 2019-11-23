@@ -24,13 +24,17 @@
                     <div class="row">
                         <div class="form-group col-md-6">
                             <label for="startDate" class="col-form-label">Start date</label>
-                            <input type="date" th:field="*{startDate}" class="form-control" id="startDate" placeholder="startdate in dd/mm/yyyy format" required>
-                            <span th:if="${#fields.hasErrors('startDate')}" th:errors="*{startDate}" class="text-danger"></span>
+                            <input type="date" th:field="*{startDate}" class="form-control" id="startDate"
+                                   placeholder="startdate in dd/mm/yyyy format" required>
+                            <span th:if="${#fields.hasErrors('startDate')}" th:errors="*{startDate}"
+                                  class="text-danger"></span>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="endDate" class="col-form-label">End date</label>
-                            <input type="date" th:field="*{endDate}" class="form-control" id="endDate" placeholder="enddate in dd/mm/yyyy format" required>
-                            <span th:if="${#fields.hasErrors('endDate')}" th:errors="*{endDate}" class="text-danger"></span>
+                            <input type="date" th:field="*{endDate}" class="form-control" id="endDate"
+                                   placeholder="enddate in dd/mm/yyyy format" required>
+                            <span th:if="${#fields.hasErrors('endDate')}" th:errors="*{endDate}"
+                                  class="text-danger"></span>
                         </div>
                     </div>
                     <div class="row">
@@ -41,8 +45,10 @@
                     <div class="row">
                         <div class="form-group col-md-6">
                             <label for="daysBetween" class="col-form-label">Difference in days</label>
-                            <input type="text" readonly th:field="*{daysBetween}" class="form-control" id="daysBetween" required>
-                            <span th:if="${#fields.hasErrors('daysBetween')}" th:errors="*{daysBetween}" class="text-danger"></span>
+                            <input type="text" readonly th:field="*{daysBetween}" class="form-control" id="daysBetween"
+                                   required>
+                            <span th:if="${#fields.hasErrors('daysBetween')}" th:errors="*{daysBetween}"
+                                  class="text-danger"></span>
                         </div>
                 </form>
             </div>

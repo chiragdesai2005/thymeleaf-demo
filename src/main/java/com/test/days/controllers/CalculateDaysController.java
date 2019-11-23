@@ -26,8 +26,8 @@ public class CalculateDaysController {
         if (result.hasErrors()) {
             return "index";
         }
-        if(dates.getStartDate().isAfter(dates.getEndDate())){
-            result.rejectValue("startDate", "error.dates","Start date must be after end date");
+        if (dates.getStartDate().isAfter(dates.getEndDate())) {
+            result.rejectValue("startDate", "error.dates", "Start date must be after end date");
             return "index";
         }
         dates.setDaysBetween(DAYS.between(dates.getStartDate(), dates.getEndDate()));
