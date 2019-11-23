@@ -47,4 +47,14 @@ public class CalculateDaysControllerTest {
         assertThat(calculateDaysController.calculate(dates, mockedBindingResult, mockedModel)).isEqualTo("index");
     }
 
+    @Test
+    public void whenCalledConfirm_thenCalculateDayst() {
+        Dates dates = Dates.builder().startDate(LocalDate.of(2019, NOVEMBER, 11)).endDate(LocalDate.of(2019, NOVEMBER, 13)).build();
+        when(mockedBindingResult.hasErrors()).thenReturn(false);
+        String view = calculateDaysController.calculate(dates, mockedBindingResult, mockedModel);
+        assertThat(view).isEqualTo("index");
+        assertThat(dates.getDaysBetween()).isEqualTo(2L);
+
+    }
+
 }
