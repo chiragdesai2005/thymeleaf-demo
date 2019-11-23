@@ -15,14 +15,26 @@ import static java.time.temporal.ChronoUnit.DAYS;
 @Controller
 public class CalculateDaysController {
 
+    /**
+     * This method is responsible for user to redirect to home page
+     *
+     * @param model
+     * @return - index.html
+     */
     @GetMapping("/")
     public String get(Model model) {
         model.addAttribute("dates", Dates.builder().build());
         return "index";
     }
 
+    /**
+     * This method is responsible for user to calculate days for the given days
+     *
+     * @param model
+     * @return - index.html
+     */
     @PostMapping("/")
-    public String calculate(final @Valid Dates dates, BindingResult result, Model model) {
+    public String calculate(@Valid Dates dates, BindingResult result, Model model) {
         if (result.hasErrors()) {
             return "index";
         }
