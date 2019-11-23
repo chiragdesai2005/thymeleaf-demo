@@ -1,4 +1,4 @@
-package com.test.days.controllers;
+package com.test.days.controller;
 
 import com.test.days.model.Dates;
 import org.springframework.stereotype.Controller;
