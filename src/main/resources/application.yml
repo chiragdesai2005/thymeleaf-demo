@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: Calculate Days Service
+  profiles:
+    active:
+  aop:
+    proxy-target-class: true
+server:
+  servlet:
+    context-path: /calculate-days/service/
+  port: 8080
